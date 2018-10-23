@@ -25,7 +25,7 @@ q_tm1 = tf.get_variable(
 q_t = tf.get_variable(
     "q_t", initializer=[[0., 1., 0.], [1., 2., 0.]], dtype=tf.float32)
 
-# Action indices, discounts and rewards, shape [batch_size].
+# Action indices, rewards and discounts, shape [batch_size].
 a_tm1 = tf.constant([0, 1], dtype=tf.int32)
 r_t = tf.constant([1, 1], dtype=tf.float32)
 pcont_t = tf.constant([0, 1], dtype=tf.float32)  # the discount factor
